@@ -3,6 +3,10 @@ function generateGIF(id, inputStrings, delay) {
 	var ctx = c.getContext("2d");
 	var str = "";
 	ctx.font = "90px bold";
+	var full_length = ctx.measureText(inputStrings).width + 10;
+
+	c.setAttribute("width", full_length + "");
+	ctx.font = "90px bold";
 	
 	ctx.fillText(inputStrings, 5, 75);
 }
