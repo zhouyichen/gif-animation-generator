@@ -1,7 +1,7 @@
 function generateGIF(inputString, delay, size) {
 	var font_setting = size + "px 'Microsoft YaHei', Myfont";
-	var y_offset = size;
-	var x_offset = size * 0.2;
+	var y_offset = size * 1.5;
+	var x_offset = size * 0.6;
 
 	var c = document.createElement("canvas");
 	var ctx = c.getContext("2d");
@@ -14,7 +14,7 @@ function generateGIF(inputString, delay, size) {
 	// setup size and background
 	ctx.font = font_setting;
 	var full_length = ctx.measureText(inputString).width + 2 * x_offset;
-	c.setAttribute("height", size * 1.5);
+	c.setAttribute("height", size * 2.5);
 	c.setAttribute("width", full_length);
 
 	add_text_frame(str);
@@ -34,7 +34,7 @@ function generateGIF(inputString, delay, size) {
 
 	function add_text_frame(str) {
 		ctx.fillStyle = 'rgb(255,255,255)';
-	  	ctx.fillRect(0, 0, full_length, size * 1.5);
+	  	ctx.fillRect(0, 0, full_length, size * 2.5);
 
 	  	// setup font size and color
 		ctx.fillStyle = 'rgb(0,0,0)';

@@ -19,6 +19,6 @@ $(function() {
         	$('#delayForm').addClass('has-error');
         }
 
-        generateGIF(text, delay, 45);
+        generateGIF(text, delay, 32);
     });
 });
