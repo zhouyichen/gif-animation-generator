@@ -3,9 +3,16 @@
 	<head>
 		<meta charset = "UTF-8">
 		<title>GIF Generator</title>
+		<style id="css">
+		@font-face {
+		    font-family: 'myFont';
+		    src: url(msyh.ttc);
+		}
+        </style>
 	</head>
 	<body>
-		<canvas id="box"></canvas>
+		<span style="font-family: myFont;"></span>
+		<canvas id="box"  style="font-family: myFont;"></canvas>
 		<p><img id="result"></p>
 		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

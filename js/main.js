@@ -1,3 +1,3 @@
 $(function() {
-	generateGIF("box", "testing测试", 300, 60);
+	generateGIF("box", "手动点赞.jpg", 150, 52);
 });
