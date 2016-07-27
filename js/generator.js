@@ -17,7 +17,8 @@ function generateGIF(inputString, delay, size) {
 	c.setAttribute("height", size * 2.5);
 	c.setAttribute("width", full_length);
 
-	add_text_frame(str);
+	add_text_frame(inputString);
+	add_text_frame('');
 
 	for (var i = 0; i < inputString.length; i++) {
 		str = str + inputString[i];
