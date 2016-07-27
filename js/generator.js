@@ -1,9 +1,9 @@
-function generateGIF(id, inputString, delay, size) {
+function generateGIF(inputString, delay, size) {
 	var font_setting = size + "px 'Microsoft YaHei', Myfont";
 	var y_offset = size;
 	var x_offset = size * 0.2;
 
-	var c = document.getElementById(id);
+	var c = document.createElement("canvas");
 	var ctx = c.getContext("2d");
 	var str = "";
 	var encoder = new GIFEncoder();
