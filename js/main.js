@@ -1,3 +1,3 @@
 $(function() {
-	generateGIF("box", "testing测试", 10);
+	generateGIF("box", "testing测试", 300, 60);
 });
