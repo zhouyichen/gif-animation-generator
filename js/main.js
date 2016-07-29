@@ -19,6 +19,17 @@ $(function() {
         	$('#delayForm').addClass('has-error');
         }
 
-        generateGIF(text, delay, 32);
+        var size = parseInt($('#size').val());
+        if (!size) {
+        	size = 32;
+        } else if (size < 0) {
+        	size = 10;
+        } else if (size > 200) {
+        	size = 200;
+        } else {
+        	$('#sizeForm').addClass('has-error');
+        }
+
+        generateGIF(text, delay, size);
     });
 });
