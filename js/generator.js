@@ -43,10 +43,10 @@ function generateGIF(inputString, delay, size) {
 		ctx.font = font_setting;
 
 		ctx.fillText(str, x_offset, y_offset);
-		var text_length = ctx.measureText(str).width + x_offset;
 
-		ctx.lineWidth = size / 12;
 		ctx.strokeStyle = "rgb(31,64,255)";
+		var text_length = ctx.measureText(str).width + x_offset;
+		ctx.lineWidth = size / 12;
 		ctx.moveTo(text_length, y_offset * 1.2);
 		ctx.lineTo(text_length, y_offset - size);
 		ctx.stroke();
