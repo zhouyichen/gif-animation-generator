@@ -1,11 +1,11 @@
 $(function() {
 	$('#generate').mouseup(function (){
+        $('#inputStringForm').removeClass('has-error');
+
         var text = $('#inputString').val();
         if (!text) {
         	$('#inputStringForm').addClass('has-error');
         	return;
-        } else {
-        	$('#inputStringForm').remove('has-error');
         }
         
         var delay = parseInt($('#delay').val());
@@ -16,7 +16,7 @@ $(function() {
         } else if (delay > 10000) {
         	delay = 10000;
         } else {
-        	$('#delayForm').addClass('has-error');
+        	// $('#delayForm').addClass('has-error');
         }
 
         var size = parseInt($('#size').val());
@@ -27,7 +27,7 @@ $(function() {
         } else if (size > 200) {
         	size = 200;
         } else {
-        	$('#sizeForm').addClass('has-error');
+        	// $('#sizeForm').addClass('has-error');
         }
 
         generateGIF(text, delay, size);
