@@ -9,8 +9,14 @@ function generateGIF(inputString, delay, size) {
 	encoder.setDelay(delay);
 	encoder.start();
 
+	var c = document.createElement("canvas");
+	var ctx = c.getContext("2d");
+	ctx.font = font_setting;
+	var full_length = ctx.measureText(inputString).width + 2 * x_offset;
+
 	add_text_frame(inputString);
 	add_text_frame('');
+
 
 	for (var i = 0; i < inputString.length; i++) {
 		str = str + inputString[i];
@@ -26,12 +32,7 @@ function generateGIF(inputString, delay, size) {
 	document.getElementById('result').src = data_url;
 
 	function add_text_frame(str) {
-		var c = document.createElement("canvas");
-		var ctx = c.getContext("2d");
-
-		// setup size and background
-		ctx.font = font_setting;
-		var full_length = ctx.measureText(inputString).width + 2 * x_offset;
+		
 		c.setAttribute("height", size * 2.5);
 		c.setAttribute("width", full_length);
 
