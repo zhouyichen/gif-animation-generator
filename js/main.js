@@ -32,4 +32,22 @@ $(function() {
 
         generateGIF(text, delay, size);
     });
+
+
+    PPAP = [
+        'Pen',
+        'Apple',
+        'Ah!',
+        'Apple Pen',
+        'Pen',
+        'Pineapple',
+        'Ah!',
+        'Pineapple Pen',
+        'Apple Pen',
+        'Pineapple Pen',
+        'Ah!',
+        'Pen Pineapple Apple Pen',
+        'Pen Pineapple Apple Pen'
+    ];
+    generateGeneralisedGIF(PPAP, 1000, 50);
 });
